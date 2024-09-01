@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="lighter_grey">#F1F1F1</color>
+    <color name="light_grey">#E3E3E3</color>
+    <color name="grey">#ADADAD</color>
+    <color name="dark_grey">#808080</color>
+    <color name="darker_grey">#575757</color>
+    <color name="darkest_grey">#2B2B2B</color>
+
+    <!-- Light Colors -->
+    <color name="light_blue">#46A3FF</color>
+    <color name="light_green">#00C096</color>
+    <color name="light_red">#FF827E</color>
+    <color name="light_yellow">#FFB048</color>
+
+    <!-- Dark Colors -->
+    <color name="dark_blue">#2575C0</color>
+    <color name="dark_green">#00A682</color>
+    <color name="dark_red">#E45651</color>
+    <color name="darker_blue">#212835</color>
+    <color name="darker_blue_alt">#12161F</color>
+    <color name="dark">#0C1017</color>
+
+    <color name="my_dark_primary">#18191a</color>
+    <color name="my_dark_primary_secondary">#242526</color>
+    <color name="hintColorDark">#FF888888</color>
+    <color name="textColorDark">#FFFFFFFF</color>
 </resources>

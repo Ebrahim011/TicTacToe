@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="?android:colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -13,6 +14,7 @@
         android:layout_gravity="center"
         app:lottie_rawRes="@raw/xo_splash"
         app:lottie_autoPlay="true"
+        app:lottie_speed="2"
         />
 
 </FrameLayout>
