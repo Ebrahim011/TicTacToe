@@ -2,9 +2,15 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TicTacToe" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#f0f2f5</item>
-        <item name="colorSecondary">#ffffff</item>
-
+        <item name="colorSecondary">@color/black</item>
+        <item name="android:colorBackground">#FFf0f2f5</item>
+        <item name="android:button">@color/button_color</item>
+        <item name="android:textColor">#292828</item>
     </style>
 
     <style name="Theme.TicTacToe" parent="Base.Theme.TicTacToe" />
+
+    <style name="OptionsMenuText" parent="TextAppearance.AppCompat.Light.Widget.PopupMenu.Small">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
 </resources>

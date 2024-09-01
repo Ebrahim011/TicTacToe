@@ -28,4 +28,8 @@
     <color name="my_dark_primary_secondary">#242526</color>
     <color name="hintColorDark">#FF888888</color>
     <color name="textColorDark">#FFFFFFFF</color>
+
+
+    <color name="button_color">#FF20A080</color>
+    <color name="button_color_night">#FF129575</color>
 </resources>

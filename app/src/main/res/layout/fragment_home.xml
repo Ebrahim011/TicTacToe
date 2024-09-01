@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- XO logo -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:lottie_rawRes="@raw/home_xo"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false" />
+
+        <!-- Choose your play mode text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose play mode"
+            android:textSize="28sp"
+            android:layout_marginTop="24dp"
+            android:textColor="?android:textColorPrimary" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_with_ai"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="With  AI "
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/white"
+            android:backgroundTint="?android:button" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_with_friend"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="With Friend"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="?android:button" />
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

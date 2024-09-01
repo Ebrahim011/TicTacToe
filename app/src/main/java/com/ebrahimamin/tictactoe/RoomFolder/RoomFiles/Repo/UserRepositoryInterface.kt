@@ -1,7 +1,7 @@
-package com.iti_project.recipeapp.RoomFolder.RoomFiles.Repo
+package com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.Repo
 
 import androidx.lifecycle.LiveData
-import com.iti_project.recipeapp.RoomFolder.RoomFiles.User
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.User
 
 interface UserRepositoryInterface {
 

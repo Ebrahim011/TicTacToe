@@ -1,10 +1,10 @@
-package com.iti_project.recipeapp.RoomFolder.RoomFiles.Repo
+package com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.Repo
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import com.iti_project.recipeapp.RoomFolder.RoomFiles.LocalSource.LocalSource
-import com.iti_project.recipeapp.RoomFolder.RoomFiles.LocalSource.LocalSourceInterface
-import com.iti_project.recipeapp.RoomFolder.RoomFiles.User
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.LocalSource.LocalSource
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.LocalSource.LocalSourceInterface
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.User
 
 class UserRepository(private val localSource: LocalSourceInterface) : UserRepositoryInterface {
 

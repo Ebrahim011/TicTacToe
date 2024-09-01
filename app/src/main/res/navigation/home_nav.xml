@@ -1,0 +1,82 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ebrahimamin.tictactoe.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_friendGameFragment"
+            app:destination="@id/friendGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.ebrahimamin.tictactoe.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_gamePlayFragment"
+            app:destination="@id/gamePlayFragment"
+            app:enterAnim="@android:anim/fade_in">
+            <argument
+                android:name="userSymbol"
+                app:argType="integer" />
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ebrahimamin.tictactoe.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.ebrahimamin.tictactoe.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" />
+    <fragment
+        android:id="@+id/gamePlayFragment"
+        android:name="com.ebrahimamin.tictactoe.GamePlayFragment"
+        android:label="fragment_game_play"
+        tools:layout="@layout/fragment_game_play" >
+        <argument
+            android:name="userSymbol"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendGameFragment"
+        android:name="com.ebrahimamin.tictactoe.FriendGameFragment"
+        android:label="fragment_friend_game"
+        tools:layout="@layout/fragment_friend_game" >
+        <action
+            android:id="@+id/action_friendGameFragment_to_friendGamePlayFragment"
+            app:destination="@id/friendGamePlayFragment">
+            <argument
+                android:name="player1Name"
+                app:argType="string" />
+            <argument
+                android:name="player2Name"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/friendGamePlayFragment"
+        android:name="com.ebrahimamin.tictactoe.FriendGamePlayFragment"
+        android:label="fragment_friend_game_play"
+        tools:layout="@layout/fragment_friend_game_play" >
+        <argument
+            android:name="player1Name"
+            app:argType="string" />
+        <argument
+            android:name="player2Name"
+            app:argType="string" />
+    </fragment>
+</navigation>

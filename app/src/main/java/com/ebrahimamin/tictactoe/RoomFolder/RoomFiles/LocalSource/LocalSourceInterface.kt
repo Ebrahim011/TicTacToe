@@ -1,7 +1,7 @@
-package com.iti_project.recipeapp.RoomFolder.RoomFiles.LocalSource
+package com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.LocalSource
 
 import androidx.lifecycle.LiveData
-import com.iti_project.recipeapp.RoomFolder.RoomFiles.User
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.User
 
 interface LocalSourceInterface {
 

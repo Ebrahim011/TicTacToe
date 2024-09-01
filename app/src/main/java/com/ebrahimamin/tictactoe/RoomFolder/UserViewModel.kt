@@ -1,9 +1,9 @@
-package com.iti_project.recipeapp.RoomFolder
+package com.ebrahimamin.tictactoe.RoomFolder
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.iti_project.recipeapp.RoomFolder.RoomFiles.Repo.UserRepository
-import com.iti_project.recipeapp.RoomFolder.RoomFiles.User
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.Repo.UserRepository
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

@@ -1,59 +1,81 @@
 package com.ebrahimamin.tictactoe
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import com.ebrahimamin.tictactoe.RoomFolder.UserViewModel
+import com.ebrahimamin.tictactoe.databinding.FragmentLoginBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [LoginFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LoginFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentLoginBinding
+    private val userViewModel: UserViewModel by viewModels()
+    private lateinit var sharedPreferences: SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
+        // This callback will intercept the back button press
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                // Do nothing to block the back button
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+    ): View {
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        sharedPreferences = requireContext().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+
+        binding.btnLogin.setOnClickListener {
+            val email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                userViewModel.getPasswordByEmail(email)
+                userViewModel.getUserId(email)
+
+                userViewModel.password.observe(viewLifecycleOwner, Observer { savedPassword ->
+                    userViewModel.userId.observe(viewLifecycleOwner, Observer { userId ->
+                        if (password == savedPassword && userId != null) {
+                            val editor = sharedPreferences.edit()
+                            editor.putInt("userId", userId)
+                            editor.putString("userEmail", email) // Save the email
+                            editor.apply()
+                            Toast.makeText(requireContext(), "Logged in successfully", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(requireActivity(), HomeActivity::class.java)
+                            startActivity(intent)
+                            requireActivity().finish()
+                        } else {
+                            Toast.makeText(requireContext(), "Invalid email or password", Toast.LENGTH_SHORT).show()
+                        }
+                    })
+                })
+            } else {
+                Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
+        }
+        binding.registerHere.setOnClickListener {
+
+            findNavController().apply{
+                navigate(R.id.action_loginFragment_to_registerFragment)}
+        }
+        return binding.root
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LoginFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LoginFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

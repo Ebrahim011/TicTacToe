@@ -2,10 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TicTacToe" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/my_dark_primary</item>
-        <item name="colorSecondary">@color/my_dark_primary_secondary</item>
+        <item name="colorSecondary">@color/white</item>
         <item name="android:colorBackground">#FF232832</item>
+        <item name="android:button">@color/button_color_night</item>
         <item name="android:textColor">@color/textColorDark</item>
-        <item name="android:textColorHint">@color/hintColorDark</item>ry colors -->
-
+        <item name="android:textColorHint">@color/hintColorDark</item>
     </style>
 </resources>

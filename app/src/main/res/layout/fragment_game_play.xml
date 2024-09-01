@@ -1,0 +1,234 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:colorBackground"
+    tools:context=".GamePlayFragment">
+
+    <!-- Circular ProgressBar above the name and results -->
+
+    <!-- Scoreboard at the top -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_shape"
+            android:paddingHorizontal="20dp"
+            android:text="0 - 0"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/computerTextView"
+            android:text="Computer(Easy)"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <!-- Acknowledgment TextView -->
+    <TextView
+        android:id="@+id/acknowledgmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <!-- 3x3 TableLayout -->
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="15dp">
+
+        <!-- First Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="1" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="2" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="3" />
+        </TableRow>
+
+        <!-- Second Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="4" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="5" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="6" />
+        </TableRow>
+
+        <!-- Third Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="7" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="8" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape"
+                android:onClick="onImageButtonClick"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:tag="9" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Replay Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/replayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Replay"
+        android:visibility="gone"
+        app:strokeWidth="2dp"
+        app:strokeColor="#04B18C"
+        android:layout_marginBottom="10dp"
+        android:textColor="?android:textColorPrimary"
+        />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Easy"
+        android:textOn="Hard"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_shape"
+        android:textColor="@color/white"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge" />
+
+</LinearLayout>

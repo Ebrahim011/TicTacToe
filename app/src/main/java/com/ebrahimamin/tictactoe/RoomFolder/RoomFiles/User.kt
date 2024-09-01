@@ -1,4 +1,4 @@
-package com.iti_project.recipeapp.RoomFolder.RoomFiles
+package com.ebrahimamin.tictactoe.RoomFolder.RoomFiles
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

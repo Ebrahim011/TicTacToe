@@ -1,7 +1,8 @@
-package com.iti_project.recipeapp.RoomFolder.RoomFiles
+package com.ebrahimamin.tictactoe.RoomFolder.RoomFiles
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.ebrahimamin.tictactoe.RoomFolder.RoomFiles.User
 
 @Dao
 interface UserDao {
