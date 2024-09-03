@@ -1,4 +1,4 @@
-# Tic-Tac-Toe Game
+# Tic-Tac-Toe
 
 A classic Tic-Tac-Toe game for Android with multiple features, including different game modes, a scoring system, and a sleek UI with light and dark modes.
 
@@ -25,4 +25,4 @@ A classic Tic-Tac-Toe game for Android with multiple features, including differe
 1. **Clone the Repository:**
 
    ```sh
-   git clone https://github.com/yourusername/tictactoe-game.git
+   git clone https://github.com/Ebrahim011/TicTacToe.git
