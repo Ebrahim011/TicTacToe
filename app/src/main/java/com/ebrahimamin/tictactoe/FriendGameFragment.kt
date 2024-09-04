@@ -27,9 +27,8 @@ class FriendGameFragment : Fragment() {
         val continueButton: MaterialButton = view.findViewById(R.id.continueButton)
 
         continueButton.setOnClickListener {
-            val player1Name = if (player1EditText.text.toString().isEmpty()) "Player 1" else player1EditText.text.toString()
-            val player2Name = if (player2EditText.text.toString().isEmpty()) "Player 2" else player2EditText.text.toString()
-
+            val player1Name = if (player1EditText.text.toString().isEmpty()) getString(R.string.player_1) else player1EditText.text.toString()
+            val player2Name = if (player2EditText.text.toString().isEmpty()) getString(R.string.player_2) else player2EditText.text.toString()
             val action = FriendGameFragmentDirections.actionFriendGameFragmentToFriendGamePlayFragment(player1Name, player2Name)
             findNavController().navigate(action)
         }

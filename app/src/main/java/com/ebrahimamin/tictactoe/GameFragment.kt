@@ -70,7 +70,7 @@ class GameFragment : Fragment() {
                 findNavController().navigate(action)
             }
             else -> {
-                Toast.makeText(context, "Please select a side", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, getString(R.string.please_select_a_side), Toast.LENGTH_SHORT).show()
             }
         }
     }

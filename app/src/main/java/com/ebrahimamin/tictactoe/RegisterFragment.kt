@@ -58,24 +58,29 @@ class RegisterFragment : Fragment() {
             // Input validation
             when {
                 userName.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() -> {
-                    Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),
+                        getString(R.string.please_fill_in_all_fields), Toast.LENGTH_SHORT).show()
                 }
                 !email.matches(emailRegex) -> {
-                    binding.tvEmailHelper.text = "Please enter a valid email address."
+                    binding.tvEmailHelper.text =
+                        getString(R.string.please_enter_a_valid_email_address)
                     binding.tvEmailHelper.visibility = View.VISIBLE
                 }
                 !password.matches(passwordRegex) -> {
-                    binding.tvPasswordHelper.text = "Password must be 6-12 characters, including at least one uppercase letter, one lowercase letter, and one number."
+                    binding.tvPasswordHelper.text =
+                        getString(R.string.password_must_be_6_12_characters_including_at_least_one_uppercase_letter_one_lowercase_letter_and_one_number)
                     binding.tvPasswordHelper.visibility = View.VISIBLE
                 }
                 password != confirmPassword -> {
-                    binding.tvConfirmPasswordHelper.text = "Confirm Password does not match the Password."
+                    binding.tvConfirmPasswordHelper.text =
+                        getString(R.string.confirm_password_does_not_match_the_password)
                     binding.tvConfirmPasswordHelper.visibility = View.VISIBLE
                     binding.etRegisterPassword.text.clear()
                     binding.etRegisterConfirmPassword.text.clear()
                 }
                 userViewModel.checkIfEmailExistsBoolean(email) -> {
-                    Toast.makeText(requireContext(), "Email already exists", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),
+                        getString(R.string.email_already_exists), Toast.LENGTH_SHORT).show()
                     binding.etRegisterEmail.text.clear()
                     binding.etRegisterPassword.text.clear()
                     binding.etUserName.text.clear()

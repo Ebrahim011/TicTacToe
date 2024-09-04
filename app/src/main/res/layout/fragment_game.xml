@@ -19,7 +19,7 @@
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pick your side"
+            android:text="@string/pick_your_side"
             android:textSize="24sp"
             android:gravity="center"
             android:textColor="?android:textColorPrimary"
@@ -84,9 +84,9 @@
         <!-- Continue Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/continueButton"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Go"
+            android:text="@string/go"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"

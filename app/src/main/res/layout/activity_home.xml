@@ -41,6 +41,16 @@
             android:scaleType="fitXY"
 
             android:src="@drawable/ic_sun" />
+        <ImageButton
+            android:id="@+id/language"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="@null"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/baseline_language_24" />
 
 
     </androidx.appcompat.widget.Toolbar>

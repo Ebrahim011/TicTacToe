@@ -18,7 +18,7 @@
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add your names"
+            android:text="@string/add_your_names"
             android:textSize="35sp"
             android:gravity="center"
             android:textColor="?android:button"
@@ -56,7 +56,7 @@
                     android:background="@drawable/edit_text_shape"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:hint="Player 1 Name"
+                    android:hint="@string/player_1_name"
                     android:inputType="textPersonName"
                     android:layout_marginTop="16dp" />
             </LinearLayout>
@@ -80,7 +80,7 @@
                     android:id="@+id/player2Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Player 2 Name"
+                    android:hint="@string/player_2_name"
                     android:background="@drawable/edit_text_shape"
                     android:padding="10dp"
                     android:gravity="center"
@@ -92,9 +92,9 @@
         <!-- Continue Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/continueButton"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Go"
+            android:text="@string/go"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"

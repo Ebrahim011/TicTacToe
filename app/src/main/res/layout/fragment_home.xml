@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose play mode"
+            android:text="@string/choose_play_mode"
             android:textSize="28sp"
             android:layout_marginTop="24dp"
             android:textColor="?android:textColorPrimary" />
@@ -33,7 +33,7 @@
             android:id="@+id/btn_with_ai"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:text="With  AI "
+            android:text="@string/with_ai"
             android:textSize="20sp"
             android:layout_marginTop="24dp"
             android:textColor="@color/white"
@@ -44,7 +44,7 @@
             android:id="@+id/btn_with_friend"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:text="With Friend"
+            android:text="@string/with_friend"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_marginTop="16dp"

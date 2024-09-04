@@ -108,7 +108,7 @@ class GamePlayFragment : Fragment() {
     }
 
     private fun updateComputerName() {
-        computerNameTextView.text = if (isHard) "Computer (Hard)" else "Computer (Easy)"
+        computerNameTextView.text = if (isHard) getString(R.string.computer_hard) else getString(R.string.computer_easy)
     }
 
     private fun onButtonClick(row: Int, col: Int) {
@@ -118,11 +118,11 @@ class GamePlayFragment : Fragment() {
             if (checkForWinner(playerSymbol)) {
                 playerScore++
                 updateScore()
-                showAcknowledgment("Player Wins!")
+                showAcknowledgment(getString(R.string.you_wins))
                 highlightWinningCells(playerSymbol)
                 replayButton.visibility = View.VISIBLE
             } else if (isBoardFull()) {
-                showAcknowledgment("Draw!")
+                showAcknowledgment(getString(R.string.draw))
                 replayButton.visibility = View.VISIBLE
             } else {
                 playerTurn = false
@@ -136,7 +136,7 @@ class GamePlayFragment : Fragment() {
         handler.postDelayed({
             progressBar.visibility = View.GONE
             aiMove()
-        }, 2000)
+        }, 1100)
     }
 
     private fun aiMove() {
@@ -148,11 +148,11 @@ class GamePlayFragment : Fragment() {
         if (checkForWinner(aiSymbol)) {
             aiScore++
             updateScore()
-            showAcknowledgment("AI Wins!")
+            showAcknowledgment(getString(R.string.computer_wins))
             highlightWinningCells(aiSymbol)
             replayButton.visibility = View.VISIBLE
         } else if (isBoardFull()) {
-            showAcknowledgment("Draw!")
+            showAcknowledgment(getString(R.string.draw))
             replayButton.visibility = View.VISIBLE
         } else {
             playerTurn = true
@@ -174,6 +174,8 @@ class GamePlayFragment : Fragment() {
             buttons[row][col].setImageResource(if (aiSymbol == "X") R.drawable.ic_x else R.drawable.ic_o)
         }
     }
+
+
 
     private fun makeSmartMove() {
         val bestMove = findBestMove()
@@ -242,6 +244,9 @@ class GamePlayFragment : Fragment() {
             best
         }
     }
+
+
+
 
     private fun evaluateBoard(): Int {
         // Check rows, columns, and diagonals for a win condition

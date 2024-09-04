@@ -2,4 +2,42 @@
     <string name="app_name">Tic Tac Toe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="wins">" Wins!"</string>
+    <string name="it_s_a_draw">It\'s a Draw!</string>
+    <string name="s_turn">\'s Turn</string>
+    <string name="please_select_a_side">Please select a side</string>
+    <string name="computer_hard">Computer (Hard)</string>
+    <string name="computer_easy">Computer (Easy)</string>
+    <string name="you_wins">You Wins!</string>
+    <string name="draw">Draw!</string>
+    <string name="computer_wins">Computer Wins!</string>
+    <string name="please_fill_in_all_fields">Please fill in all fields</string>
+    <string name="please_enter_a_valid_email_address">Please enter a valid email address.</string>
+    <string name="password_must_be_6_12_characters_including_at_least_one_uppercase_letter_one_lowercase_letter_and_one_number">Password must be 6-12 characters, including at least one uppercase letter, one lowercase letter, and one number.</string>
+    <string name="confirm_password_does_not_match_the_password" translatable="false">Confirm Password does not match the Password.</string>
+    <string name="email_already_exists">Email already exists</string>
+    <string name="add_your_names">Add your names</string>
+    <string name="player_1_name">Player 1 Name</string>
+    <string name="player_2_name">Player 2 Name</string>
+    <string name="go">Go</string>
+    <string name="pick_your_side">Pick your side</string>
+    <string name="easy">Easy</string>
+    <string name="hard">Hard</string>
+    <string name="you">you</string>
+    <string name="choose_play_mode">Choose play mode</string>
+    <string name="with_ai">With AI</string>
+    <string name="with_friend">With Friend</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register_here">Register here</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="loginbtn">Login</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login_here">Login here</string>
 </resources>

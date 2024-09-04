@@ -1,0 +1,45 @@
+<resources>
+
+    <string name="app_name">Tic Tac Toe</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="player_1">اللاعب 1</string>
+    <string name="player_2">اللاعب 2</string>
+    <string name="wins"> فاز!</string>
+    <string name="it_s_a_draw">إنها تعادل!</string>
+    <string name="s_turn"> دوره</string>
+    <string name="please_select_a_side">الرجاء اختيار جانب</string>
+    <string name="computer_hard">الكمبيوتر (صعب)</string>
+    <string name="computer_easy">الكمبيوتر (سهل)</string>
+    <string name="you_wins">انت تفوز !</string>
+    <string name="draw">تعادل!</string>
+    <string name="computer_wins">الكمبيوتر فاز!</string>
+    <string name="please_fill_in_all_fields">الرجاء تعبئة جميع الحقول</string>
+    <string name="please_enter_a_valid_email_address">الرجاء إدخال عنوان بريد إلكتروني صالح.</string>
+
+    <string name="password_must_be_6_12_characters_including_at_least_one_uppercase_letter_one_lowercase_letter_and_one_number">يجب أن تكون كلمة المرور من 6-12 حرفًا، بما في ذلك حرف كبير واحد على الأقل وحرف صغير واحد ورقم واحد</string>
+    <string name="email_already_exists">البريد الإلكتروني موجود بالفعل</string>
+    <string name="add_your_names">أضف أسمائك</string>
+    <string name="player_1_name">اسم اللاعب 1</string>
+    <string name="player_2_name">اسم اللاعب 2</string>
+    <string name="go">انطلق</string>
+    <string name="pick_your_side">اختر جانبك</string>
+    <string name="easy">سهل</string>
+    <string name="hard">صعب</string>
+    <string name="you">أنت</string>
+    <string name="choose_play_mode">اختر وضع اللعب</string>
+    <string name="with_ai">مع الذكاء الاصطناعي</string>
+    <string name="with_friend">مع صديق</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="register_here">سجل هنا</string>
+    <string name="don_t_have_an_account">ليس لديك حساب؟</string>
+    <string name="loginbtn">تسجيل الدخول</string>
+    <string name="register">تسجيل</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="already_have_an_account">هل لديك حساب بالفعل؟</string>
+    <string name="login_here">سجل الدخول هنا</string>
+
+</resources>

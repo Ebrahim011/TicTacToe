@@ -34,6 +34,7 @@ class LoginFragment : Fragment() {
         }
         requireActivity().onBackPressedDispatcher.addCallback(this, callback)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -77,5 +78,6 @@ class LoginFragment : Fragment() {
         return binding.root
 
     }
+
 
 }

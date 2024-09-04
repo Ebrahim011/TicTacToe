@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import com.google.android.material.button.MaterialButton
 
 class FriendGamePlayFragment : Fragment() {
@@ -17,27 +18,35 @@ class FriendGamePlayFragment : Fragment() {
     private lateinit var scoreTextView: TextView
     private lateinit var replayButton: MaterialButton
     private lateinit var currentPlayerTurn: String
-
     private val boardButtons = Array(3) { arrayOfNulls<ImageButton>(3) }
     private var board = Array(3) { arrayOfNulls<String>(3) }
     private var player1Score = 0
     private var player2Score = 0
     private var isPlayer1Turn = true
 
+    val argsNames: FriendGamePlayFragmentArgs by navArgs()
+    lateinit var player1Name: String
+    lateinit var player2Name: String
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        player1Name=argsNames.player1Name?: getString(R.string.player_1)
+        player2Name=argsNames.player2Name?: getString(R.string.player_2)
         return inflater.inflate(R.layout.fragment_friend_game_play, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         // Initialize UI components
         player1TextView = view.findViewById(R.id.player1TextView)
         player2TextView = view.findViewById(R.id.player2TextView)
+        player1TextView.text = player1Name
+        player2TextView.text = player2Name
         acknowledgmentTextView = view.findViewById(R.id.acknowledgmentTextView)
         replayButton = view.findViewById(R.id.replayButton)
         scoreTextView = view.findViewById(R.id.score)
@@ -64,7 +73,7 @@ class FriendGamePlayFragment : Fragment() {
         replayButton.setOnClickListener { resetGame() }
 
         // Set initial player turn
-        currentPlayerTurn = "Player 1"
+        currentPlayerTurn = player1Name
         updateTurnText()
         updateScoreText()  // Initialize score display
     }
@@ -110,11 +119,11 @@ class FriendGamePlayFragment : Fragment() {
         acknowledgmentTextView.visibility = View.VISIBLE
         if (isPlayer1Turn) {
             player1Score++
-            acknowledgmentTextView.text = "Player 1 Wins!"
+            acknowledgmentTextView.text = player1Name + getString(R.string.wins)+""
             highlightWinningCells("X")
         } else {
             player2Score++
-            acknowledgmentTextView.text = "Player 2 Wins!"
+            acknowledgmentTextView.text = player2Name + getString(R.string.wins)+""
             highlightWinningCells("O")
         }
         updateScoreText()
@@ -156,18 +165,18 @@ class FriendGamePlayFragment : Fragment() {
 
     private fun handleDraw() {
         acknowledgmentTextView.visibility = View.VISIBLE
-        acknowledgmentTextView.text = "It's a Draw!"
+        acknowledgmentTextView.text = getString(R.string.it_s_a_draw)
         replayButton.visibility = View.VISIBLE
     }
 
     private fun switchTurn() {
         isPlayer1Turn = !isPlayer1Turn
-        currentPlayerTurn = if (isPlayer1Turn) "Player 1" else "Player 2"
+        currentPlayerTurn = if (isPlayer1Turn) player1Name else player2Name
         updateTurnText()
     }
 
     private fun updateTurnText() {
-        acknowledgmentTextView.text = "$currentPlayerTurn's Turn"
+        acknowledgmentTextView.text = currentPlayerTurn+ getString(R.string.s_turn)
     }
 
     private fun updateScoreText() {
@@ -188,7 +197,7 @@ class FriendGamePlayFragment : Fragment() {
         acknowledgmentTextView.visibility = View.GONE
         replayButton.visibility = View.GONE
         isPlayer1Turn = true
-        currentPlayerTurn = "Player 1"
+        currentPlayerTurn = player1Name
         updateTurnText()
         updateScoreText()  // Reset score display
     }
